@@ -17,11 +17,11 @@ public class Randoms implements Iterable<Integer> {
     @Override
     public java.util.Iterator<Integer> iterator() {
         Iterator<Integer> it = new Iterator<Integer>() {
-            private int randomNum = random.nextInt(max - min + 1) + min;
+            private Integer randomNum = random.nextInt(max - min + 1) + min;
 
             @Override
             public boolean hasNext() {
-                return randomNum < max;
+                return randomNum != null;
             }
 
             @Override
